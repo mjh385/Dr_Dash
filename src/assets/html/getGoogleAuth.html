@@ -1,0 +1,71 @@
+
+<!DOCTYPE html> 
+<html >
+	<head>
+	</head>
+	<body>
+
+
+
+		لطفا کمی صبر کنید 
+
+
+		<script type="text/javascript" src="/assets/js/vendors.bundle.js"></script>
+		<script type="text/javascript">
+			
+			var url='http://localhost:4000/api/v1.0/widgetAccount/create/';
+
+			function Authorization(){
+				let currentUser = JSON.parse(localStorage.getItem('currentUser'));
+				if (currentUser && currentUser.token) {
+					return Authorization  = 'Bearer ' + currentUser.token;
+				} else{
+					return '';
+				}
+			}
+
+			function getParameterByName(name, url) {
+				if (!url) url = window.location.href;
+				name = name.replace(/[\[\]]/g, '\\$&');
+				var regex = new RegExp('[?&]' + name + '(=([^&#]*)|&|#|$)'),
+					results = regex.exec(url);
+				if (!results) return null;
+				if (!results[2]) return '';
+				return decodeURIComponent(results[2].replace(/\+/g, ' '));
+			}
+
+			if(getParameterByName('code')){
+
+				var data = {
+					code:getParameterByName('code')
+				}
+
+				$.ajax({
+					type: "post",
+					beforeSend: function(request) {
+						request.setRequestHeader("Content-Type", 'application/json');
+						request.setRequestHeader("Authorization", Authorization());
+					},
+					url: url + getParameterByName('_id'),
+					data: JSON.stringify(data),
+					success: function(msg) { 
+						self.close();
+					}
+				});  
+			}else{  
+				$.ajax({
+					type: "post",
+					beforeSend: function(request) {
+						request.setRequestHeader("Content-Type", 'application/json');
+						request.setRequestHeader("Authorization", Authorization());
+					},
+					url: url + getParameterByName('_id'),
+					success: function(msg) { 
+						location.href = msg.authUrl
+					}
+				});  
+			}
+		</script>
+	</body>
+	
+</html>

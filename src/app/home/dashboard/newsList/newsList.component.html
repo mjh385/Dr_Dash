@@ -1,0 +1,299 @@
+
+<div class="m-content">
+ 	<div class="row">  
+		<gridster [options]="gridsterOptions" [draggableOptions]="gridsterDraggableOptions"  class="dashboard"> 
+ 
+				<gridster-item  [w]="8" [h]="8" [x]="0" [y]="0" [options]="{minWidth: 4,minHeight: 4,maxWidth: 20,maxHeight: 20}" (end)="end($event)" >  
+					<app-chart-loader [chartType] = "'pie'" [chartInput] = "config_pie" ></app-chart-loader>     
+ 				</gridster-item> 
+				<gridster-item  [w]="12" [h]="6" [x]="0" [y]="0" [options]="{minWidth: 4,minHeight: 4,maxWidth: 20,maxHeight: 20}" (end)="end($event)" > 
+					<app-chart-loader [chartType] = "'polar'" [chartInput] = "config_polar" ></app-chart-loader>     
+ 				</gridster-item>  
+				 <gridster-item  [w]="12" [h]="6" [x]="0" [y]="0" [options]="{minWidth: 4,minHeight: 4,maxWidth: 20,maxHeight: 20}" (end)="end($event)" >   
+					<app-chart-loader [chartType] = "'bar_horizontal_2d'" [chartInput] = "config_bar_horizontal_2d" ></app-chart-loader>     
+				</gridster-item> 
+				<gridster-item  [w]="8" [h]="4" [x]="0" [y]="0" [options]="{minWidth: 4,minHeight: 4,maxWidth: 20,maxHeight: 20}" (end)="end($event)" >   
+					<app-chart-loader [chartType] = "'area_stacked'" [chartInput] = "config_area_stacked" ></app-chart-loader>     
+				</gridster-item> 
+				<gridster-item  [w]="8" [h]="8" [x]="0" [y]="0" [options]="{minWidth: 4,minHeight: 4,maxWidth: 20,maxHeight: 20}" (end)="end($event)" >   
+					<app-chart-loader [chartType] = "'tree_map'" [chartInput] = "config_tree_map" ></app-chart-loader>     
+				</gridster-item> 
+				<gridster-item  [w]="12" [h]="8" [x]="0" [y]="0" [options]="{minWidth: 4,minHeight: 4,maxWidth: 20,maxHeight: 20}" (end)="end($event)" >   
+					<app-chart-loader [chartType] = "'pie_grid'" [chartInput] = "config_pie_grid" ></app-chart-loader>     
+				</gridster-item> 
+				<gridster-item  [w]="12" [h]="6" [x]="0" [y]="0" [options]="{minWidth: 4,minHeight: 4,maxWidth: 20,maxHeight: 20}" (end)="end($event)" > 
+					<app-chart-loader [chartType] = "'line'" [chartInput] = "config_line" ></app-chart-loader>     
+				</gridster-item> 
+				<gridster-item  [w]="8" [h]="6" [x]="0" [y]="0" [options]="{minWidth: 4,minHeight: 4,maxWidth: 20,maxHeight: 20}" (end)="end($event)" > 
+					<app-chart-loader [chartType] = "'bar_vertical'" [chartInput] = "config_bar_vertical" ></app-chart-loader> 
+				</gridster-item>  
+				<gridster-item  [w]="6" [h]="6" [x]="0" [y]="0" [options]="{minWidth: 4,minHeight: 4,maxWidth: 20,maxHeight: 20}" (end)="end($event)" >   
+					<app-chart-loader [chartType] = "'gauge'" [chartInput] = "config_gauge" ></app-chart-loader>     
+				</gridster-item> 
+				<gridster-item  [w]="8" [h]="6" [x]="0" [y]="0" [options]="{minWidth: 4,minHeight: 4,maxWidth: 20,maxHeight: 20}" (end)="end($event)" >   
+					<app-chart-loader [chartType] = "'area'" [chartInput] = "config_area" ></app-chart-loader>     
+				</gridster-item> 
+				<gridster-item  [w]="12" [h]="6" [x]="0" [y]="0" [options]="{minWidth: 4,minHeight: 4,maxWidth: 20,maxHeight: 20}" (end)="end($event)" >   
+					<app-chart-loader [chartType] = "'bubble'" [chartInput] = "config_bubble" ></app-chart-loader>     
+				</gridster-item> 
+				<gridster-item  [w]="6" [h]="6" [x]="0" [y]="0" [options]="{minWidth: 4,minHeight: 4,maxWidth: 20,maxHeight: 20}" (end)="end($event)" >   
+					<app-chart-loader [chartType] = "'doughnut'" [chartInput] = "config_doughnut" ></app-chart-loader>     
+				</gridster-item> 
+				<gridster-item  [w]="8" [h]="6" [x]="0" [y]="0" [options]="{minWidth: 4,minHeight: 4,maxWidth: 20,maxHeight: 20}" (end)="end($event)" >   
+					<app-chart-loader [chartType] = "'heat_map'" [chartInput] = "config_heat_map" ></app-chart-loader>     
+				</gridster-item> 
+				<gridster-item  [w]="14" [h]="6" [x]="0" [y]="0" [options]="{minWidth: 4,minHeight: 4,maxWidth: 20,maxHeight: 20}" (end)="end($event)" >   
+					<app-chart-loader [chartType] = "'number_card'" [chartInput] = "config_number_card" ></app-chart-loader>     
+				</gridster-item> 
+				<gridster-item  [w]="3" [h]="3" [x]="0" [y]="0" [options]="{minWidth: 4,minHeight: 4,maxWidth: 20,maxHeight: 20}" (end)="end($event)" >   
+					<app-chart-loader [chartType] = "'linear_gauge'" [chartInput] = "config_linear_gauge" ></app-chart-loader>     
+				</gridster-item> 
+				<gridster-item  [w]="3" [h]="3" [x]="0" [y]="0" [options]="{minWidth: 4,minHeight: 4,maxWidth: 20,maxHeight: 20}" (end)="end($event)" >   
+					<app-chart-loader [chartType] = "'linear_gauge'" [chartInput] = "config_linear_gauge" ></app-chart-loader>     
+				</gridster-item> 
+				<gridster-item  [w]="3" [h]="3" [x]="0" [y]="0" [options]="{minWidth: 4,minHeight: 4,maxWidth: 20,maxHeight: 20}" (end)="end($event)" >   
+					<app-chart-loader [chartType] = "'linear_gauge'" [chartInput] = "config_linear_gauge" ></app-chart-loader>     
+				</gridster-item> 
+				<gridster-item  [w]="3" [h]="3" [x]="0" [y]="0" [options]="{minWidth: 4,minHeight: 4,maxWidth: 20,maxHeight: 20}" (end)="end($event)" >   
+					<app-chart-loader [chartType] = "'linear_gauge'" [chartInput] = "config_linear_gauge" ></app-chart-loader>     
+				</gridster-item> 
+				<gridster-item  [w]="14" [h]="6" [x]="0" [y]="0" [options]="{minWidth: 4,minHeight: 4,maxWidth: 20,maxHeight: 20}" (end)="end($event)" >   
+					<app-chart-loader [chartType] = "'pie_advanced'" [chartInput] = "config_pie_advanced" ></app-chart-loader>     
+				</gridster-item> 
+			 	<gridster-item  [w]="6" [h]="6" [x]="0" [y]="0" [options]="{minWidth: 4,minHeight: 4,maxWidth: 20,maxHeight: 20}" (end)="end($event)" >   
+					<app-chart-loader [chartType] = "'area_normalized'" [chartInput] = "config_area_normalized" ></app-chart-loader>     
+				</gridster-item> 
+
+				<!-- <gridster-item [dragAndDrop]="false" [resizable]="false" [w]="20" [h]="10" [x]="0" [y]="0" [options]="{minWidth: 4,minHeight: 4,maxWidth: 20,maxHeight: 20}" (end)="end($event)" >   
+					<app-chart-loader [chartType] = "'force_directed'" [chartInput] = "config_force_directed" ></app-chart-loader>     
+				</gridster-item>  -->
+
+				<!-- layout="dagreCluster" -->
+
+
+				<gridster-item [dragAndDrop]="false" [resizable]="false" [w]="11" [h]="10" [x]="0" [y]="0" [options]="{minWidth: 4,minHeight: 4,maxWidth: 20,maxHeight: 20}" (end)="end($event)" >   
+					<ngx-graph
+						[view]="[700, 700]"
+						layout="colaForceDirected"
+						[links]="[
+						{
+							id: 'a',
+							source: '1',
+							target: '2',
+							label: '2',
+							strong:'2',
+							color:'red'
+						}, {
+							id: 'b',
+							source: '1',
+							target: '3',
+							strong:'10',
+							color:'blue',
+							label: '10'
+						}, {
+							id: 'c',
+							source: '3',
+							target: '4',
+							strong:'1',
+							color:'pink',
+							label: '1'
+						}, {
+							id: 'd',
+							source: '3',
+							target: '5',
+							strong:'7',
+							color:'yellow',
+							label: '7'
+						}, {
+							id: 'e',
+							source: '4',
+							target: '5',
+							strong:'2',
+							color:'green',
+							label: '2'
+						}, {
+							id: 'f',
+							source: '2',
+							target: '6',
+							strong:'8',
+							color:'red',
+							label: '8'
+						}
+						]"
+						[nodes]="[
+						{
+							id: '1',
+							label: 'دانشگاه 5',
+							color:'pink',
+							width:100,
+							height:150,
+							rx:100,
+							ry:100
+						}, {
+							id: '2',
+							label: 'دانشگاه 4',
+							color:'yellow',
+							width:100,
+							height:50,
+							rx:100,
+							ry:100
+						}, {
+							id: '3',
+							label: 'دانشگاه اول',
+							color:'red',
+							width:100,
+							height:100,
+							rx:100,
+							ry:100
+						}, {
+							id: '4',
+							label: 'دانشگاه 3',
+							color:'green',
+							width:50,
+							height:50,
+							rx:100,
+							ry:100
+						}, {
+							id: '5',
+							label: 'دانشگاه 2',
+							color:'yellow',
+							width:50,
+							height:50,
+							y:25,
+							rx:5,
+							ry:5
+						}, {
+							id: '6',
+							label: 'دانشگاه 7',
+							color:'blue'
+						}
+						]"
+						[clusters]="[
+						{
+						  id: 'calss1',
+						  label: 'Cluster node1',
+						  childNodeIds: ['1', '4'],
+						  color:'pink'
+						},
+						{
+							id: 'calss2',
+							label: 'Cluster node2',
+							childNodeIds: ['3', '5']
+						  }
+					  ]"
+					>
+						<ng-template #defsTemplate>
+							<svg:marker id="arrow" viewBox="0 -5 10 10" refX="8" refY="0" markerWidth="4" markerHeight="4" orient="auto">
+							<svg:path d="M0,-5L10,0L0,5" class="arrow-head" />
+							</svg:marker>
+						</ng-template>
+						
+						<ng-template #clusterTemplate let-cluster>
+							<svg:g class="node cluster" >
+							<svg:rect
+								rx="5"
+								ry="5"
+								[attr.width]="cluster.dimension.width"
+								[attr.height]="cluster.dimension.height"
+								[attr.fill]="cluster.color"
+							/>
+							</svg:g>
+						</ng-template>
+						
+						<ng-template #nodeTemplate let-node>
+							<svg:g class="node" >
+							<svg:rect
+								[attr.rotate]="50"
+								[attr.rx]="node.rx"
+								[attr.transform]="node.rotate"
+								[attr.ry]="node.ry"
+								[attr.width]="node.width"
+								[attr.height]="node.height"
+								[attr.fill]="node.color"
+								[attr.href]="'#test' + node.id"
+							/>
+							<svg:text alignment-baseline="central" [attr.x]="10" [attr.y]="node.dimension.height / 2">
+								{{node.label}}
+							</svg:text>
+							</svg:g>
+						</ng-template>
+						
+						<ng-template #linkTemplate let-link>
+							<svg:g class="edge">
+							<svg:path class="line" [attr.stroke]="link.color" [attr.stroke-width]="link.strong"stroke-width="2" marker-end="url(#arrow)"></svg:path>
+							<svg:text class="edge-label" text-anchor="middle" > 
+								<textPath
+									class="text-path"
+									[attr.href]="'#' + link.id"
+									[style.dominant-baseline]="link.dominantBaseline"
+									startOffset="50%"
+									[attr.fill]="link.color"
+								>
+								{{link.label}}
+								</textPath>
+							</svg:text>
+							</svg:g>
+						</ng-template>
+					</ngx-graph>
+
+				</gridster-item> 
+				<!-- <gridster-item [dragAndDrop]="false" [resizable]="false" [w]="10" [h]="10" [x]="0" [y]="0" [options]="{minWidth: 4,minHeight: 4,maxWidth: 20,maxHeight: 20}" (end)="end($event)" > 
+					<ngx-graph 	
+						[view]="[700, 700]" 
+						layout="d3ForceDirected"
+						[links]="[
+							{
+							id: 'a',
+							source: '1',
+							target: '2'
+							}, {
+							id: 'b',
+							source: '1',
+							target: '3'
+							}, {
+							id: 'c',
+							source: '3',
+							target: '4'
+							}, {
+							id: 'd',
+							source: '3',
+							target: '5'
+							}, {
+							id: 'e',
+							source: '4',
+							target: '5'
+							}, {
+							id: 'f',
+							source: '2',
+							target: '6'
+							}
+						]"
+						[nodes]="[
+							{
+							id: '1',
+							label: 'Node A'
+							}, {
+							id: '2',
+							label: 'Node B'
+							}, {
+							id: '3',
+							label: 'Node C'
+							}, {
+							id: '4',
+							label: 'Node D'
+							}, {
+							id: '5',
+							label: 'Node E'
+							}, {
+							id: '6',
+							label: 'Node F'
+							}
+						]"
+					></ngx-graph>
+				</gridster-item>   
+				 -->
+		</gridster>
+	</div>
+
+</div>
+ 

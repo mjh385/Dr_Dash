@@ -1,0 +1,281 @@
+ 
+ 
+	<!--begin::addNews-->
+	<ng-template #addNews let-c="close" >
+		<div class="modal-header">
+			<h4 class="modal-title">افزودن خبر جدید</h4>
+			<button type="button" class="close" aria-label="Close" (click)="c()">
+				<span aria-hidden="true">&times;</span>
+			</button>
+		</div>
+		<div class="modal-body"> 
+			<div style="direction: rtl;text-align: right;">
+
+				<div class="row">
+					<div class="col-md-12 form-group">
+						<div class="col-md-4 float-right paddingTop12">
+							تهیه  کننده خبر : 
+						</div>	
+						<div class="col-md-8 float-right">
+							<input  class="form-control formElement" type="text" [(ngModel)]="newNews.name" value="">
+						</div>
+					</div>
+					<div class="col-md-12 form-group">
+						<div class="col-md-4 float-right paddingTop12">
+							محور تلاش : 
+						</div>	
+						<div class="col-md-8 float-right">
+							<input  class="form-control formElement" type="text" [(ngModel)]="newNews.mehvar" value="">
+						</div>
+					</div>
+					<div class="col-md-12 form-group">
+						<div class="col-md-4 float-right paddingTop12">
+							عطف/پیرو : 
+						</div>	
+						<div class="col-md-8 float-right">
+							<input  class="form-control formElement" type="text" [(ngModel)]="newNews.atf" value="">
+						</div>
+					</div>
+					<div class="col-md-12 form-group">
+						<div class="col-md-4 float-right paddingTop12">
+							روش جمع آوری : 
+						</div>	
+						<div class="col-md-8 float-right">
+							<select  class="form-control formElement"  [(ngModel)]="newNews.way">
+								<option  [value]="'open'">آشکار</option>
+								<option  [value]="'regular'">رسمی</option> 
+								<option  [value]="'private'">پنهان</option> 
+							</select> 
+						</div>
+					</div>	 
+					<div class="col-md-12 form-group">
+						<div class="col-md-4 float-right paddingTop12">
+							طبقه بندی : 
+						</div>	
+						<div class="col-md-8 float-right">
+							<select  class="form-control formElement"  [(ngModel)]="newNews.category">
+								<option  [value]="'open'">عادی</option>
+								<option  [value]="'regular'">مهم </option> 
+								<option  [value]="'private'">محرمانه</option> 
+							</select> 
+						</div>
+					</div>	 	 
+					<div class="col-md-12 form-group">
+						<div class="col-md-4 float-right paddingTop12">
+							سطح : 
+						</div>	
+						<div class="col-md-8 float-right">
+							<select  class="form-control formElement"  [(ngModel)]="newNews.sath">
+							</select> 
+						</div>
+					</div>	 
+					<div class="col-md-12 form-group">
+						<div class="col-md-4 float-right paddingTop12">
+							محل وقوع : 
+						</div>	
+						<div class="col-md-8 float-right">
+							<select  class="form-control formElement"  [(ngModel)]="newNews.place">
+							</select> 
+						</div>
+					</div>	
+					<div class="col-md-12 form-group">
+						<div class="col-md-4 float-right paddingTop12">
+							تاریخ وقوع : 
+						</div>	
+						<div class="col-md-8 float-right">
+							<input  class="form-control formElement" type="text" [(ngModel)]="newNews.date" value="">
+						</div>
+					</div>	
+					<div class="col-md-12 form-group">
+						<div class="col-md-4 float-right paddingTop12">
+							زمان وقوع : 
+						</div>	
+						<div class="col-md-8 float-right">
+							<input  class="form-control formElement" type="text" [(ngModel)]="newNews.time" value="">
+						</div>
+					</div>	 
+					<div class="col-md-12 form-group">
+						<div class="col-md-4 float-right paddingTop12">
+							علت وقوع : 
+						</div>	
+						<div class="col-md-8 float-right">
+							<input  class="form-control formElement" type="text" [(ngModel)]="newNews.for" value="">
+						</div>
+					</div>
+					<div class="col-md-12 form-group">
+						<div class="col-md-4 float-right paddingTop12">
+							عنوان : 
+						</div>	
+						<div class="col-md-8 float-right">
+							<input  class="form-control formElement" type="text" [(ngModel)]="newNews.title" value="">
+						</div>
+					</div>
+					<div class="col-md-12 form-group">
+						<div class="col-md-4 float-right paddingTop12">
+							متن خبر : 
+						</div>	
+						<div class="col-md-8 float-right">
+							<input  class="form-control formElement" type="text" [(ngModel)]="newNews.text" value="">
+						</div>
+					</div> 
+					<div class="col-md-12 form-group">
+						<div class="col-md-4 float-right paddingTop12">
+							نظریه : 
+						</div>	
+						<div class="col-md-8 float-right">
+							<input  class="form-control formElement" type="text" [(ngModel)]="newNews.reason" value="">
+						</div>
+					</div> 
+				</div> 
+			</div>
+		</div>
+		<div class="modal-footer" style="direction: rtl;">
+			<input type="button" class="btn btn-success" value="افزودن خبر" (click)="c();addNews(newNews)">
+		</div>
+	</ng-template>
+	<!--end::addNews-->
+
+ 
+	<!--begin::settings-->
+	<ng-template #settings let-c="close" >
+		<div class="modal-header">
+			<h4 class="modal-title">تنظیمات</h4>
+			<button type="button" class="close" aria-label="Close" (click)="c()">
+				<span aria-hidden="true">&times;</span>
+			</button>
+		</div>
+		<div class="modal-body" style="direction: rtl;text-align: right;">
+			<!-- <p>تنظیمات : </p> 
+			<div class="row">
+				<div class="col-md-12 form-group">
+					<div class="col-md-4 float-right paddingTop12">
+						رنگ پس زمینه : 
+					</div>	
+					<div class="col-md-8 float-right">
+						<select  class="form-control formElement"  [(ngModel)]="newBackground" (change)="changeBackground(newBackground)">
+							<option  [value]="''">روشن</option>
+							<option  [value]="'dark'">تاریک</option> 
+						</select> 
+					</div>
+				</div>	 
+				<div class="col-md-12 form-group">
+					<div class="col-md-4 float-right paddingTop12">
+						رنگ نمودار ها : 
+					</div>	
+					<div class="col-md-8 float-right">
+						<select class="form-control formElement"  [(ngModel)]="newColor" (change)="changeChartColor(newColor)">
+							<option  [value]="'vivid'">vivid</option>
+							<option  [value]="'natural'">natural</option>
+							<option  [value]="'cool'">cool</option>
+							<option  [value]="'fire'">fire</option>
+							<option  [value]="'solar'">solar</option>
+							<option  [value]="'air'">air</option>
+							<option  [value]="'aqua'">aqua</option>
+							<option  [value]="'flame'">flame</option>
+							<option  [value]="'ocean'">ocean</option>
+							<option  [value]="'forest'">forest</option>
+							<option  [value]="'horizon'">horizon</option>
+							<option  [value]="'neons'">neons</option>
+							<option  [value]="'picnic'">picnic</option>
+							<option  [value]="'night'">night</option>
+							<option  [value]="'nightLights'">nightLights</option> 
+						</select> 
+					</div>
+				</div>	
+			</div>   -->
+		</div>
+		<div class="modal-footer" style="direction:rtl;">
+			<button type="button" class="btn btn-success" (click)="c()">تایید</button>
+		</div>
+	</ng-template>
+	<!--end::settings-->
+
+
+
+	<!--begin::guid-->
+	<ng-template #guid let-c="close" >
+		<div class="modal-header">
+			<h4 class="modal-title">راهنما</h4>
+			<button type="button" class="close" aria-label="Close" (click)="c()">
+				<span aria-hidden="true">&times;</span>
+			</button>
+		</div>
+		<div class="modal-body">
+			<div style="direction:rtl; text-align: right;">
+				ابتدا می بایست دکمه "افزودن خبر " را فشار دهید . سپس می توانید یک خبر جدید را وارد نمایید . 
+			<br/>
+			همچنین می توانید در قسمت لیست خبرها، همه خبر های موجود را مشاهده نمایید
+ 
+			</div>
+		</div>
+		<div class="modal-footer" style="direction: rtl;">
+			<button type="button"  class="btn btn-success" (click)="c()">بستن</button>
+		</div>
+	</ng-template>
+	<!--end::guid-->
+
+
+
+	
+
+<!-- BEGIN: Left Aside -->
+<button class="m-aside-left-close  m-aside-left-close--skin-light" id="m_aside_left_close_btn" appunwraptag="">
+	<i class="la la-close"></i>
+</button>
+<div id="m_aside_left" class="m-grid__item m-aside-left  m-aside-left--skin-light" style="right: 0; left: inherit;width: 110px !important; overflow:hidden">
+	<!-- BEGIN: Brand -->
+	<div class="m-brand  m-brand--skin-light">
+		<a routerLink="/index" class="m-brand__logo">
+			<img alt="" src="./assets/img/logo/logo.png"/>
+		</a>
+	</div> 
+	
+	<!-- END: Brand --> 	<!-- BEGIN: Aside Menu -->
+	<div id="m_ver_menu" class="m-aside-menu  m-aside-menu--skin-light m-aside-menu--submenu-skin-light"  >
+		<ul class="m-menu__nav  m-menu__nav--dropdown-submenu-arrow">
+			<!-- <li class="m-menu__item  m-menu__item--submenu m-menu__item--submenu-fullheight"  >
+				<a  href="#" class="m-menu__link m-menu__toggle">
+					<i class="m-menu__link-icon flaticon-menu"></i>
+					<span class="m-menu__link-text">
+						Applications
+					</span>
+					<i class="m-menu__ver-arrow la la-angle-right"></i>
+				</a> 
+			</li> -->
+			  <li class="m-menu__item  m-menu__item--submenu" style="height: 93px; position: inherit;">
+				<a  href="/news-list" class="m-menu__link m-menu__toggle">
+					<i class="m-menu__link-icon flaticon-stopwatch" style="padding-bottom: 10px;"></i>
+					<span class="m-menu__link-text" style="display: table-footer-group">
+						لیست خبر‌ها
+					</span>
+				</a> 
+			</li>
+			<li class="m-menu__item  m-menu__item--submenu m-menu__item--bottom" id="addNewDashboardBtn" (click)="modalOpen(addNews)" style="height: 93px; position: inherit;">
+				<a  href="#" class="m-menu__link m-menu__toggle">
+					<i class="m-menu__link-icon flaticon-add" style="padding-bottom: 10px;"></i>
+					<span class="m-menu__link-text"  style="display: table-footer-group">
+						افزودن خبر جدید 
+					</span>
+				</a> 
+			</li> 
+			<li class="m-menu__item  m-menu__item--submenu m-menu__item--bottom-2"  style="height: 93px; bottom: 122px;; position: inherit;">
+				<a  href="#" class="m-menu__link m-menu__toggle">
+					<i class="m-menu__link-icon flaticon-settings" style="padding-bottom: 10px;"></i>
+					<span class="m-menu__link-text"  style="display: table-footer-group">
+						تنظیمات
+					</span>
+				</a> 
+			</li>
+			<li class="m-menu__item  m-menu__item--submenu m-menu__item--bottom-1" style="height: 93px; position: inherit;">
+				<a  href="#" class="m-menu__link m-menu__toggle">
+					<i class="m-menu__link-icon flaticon-info" style="padding-bottom: 10px;"></i>
+					<span class="m-menu__link-text" style="display: table-footer-group" >
+						راهنما
+					</span>
+				</a> 
+			</li>
+		</ul>
+	</div>
+	<!-- END: Aside Menu -->
+</div>
+<!-- END: Left Aside -->
