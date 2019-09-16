@@ -5,6 +5,7 @@ import { RouterModule } from '@angular/router';
 import { GridsterModule } from 'angular2gridster';
 import { ChartsModule } from './chart/charts.module'; 
 import { ChartLoaderComponent } from './chartLoader.component';
+import { LoadingComponent } from './loading/loading.component';
    
 
 import { PieChartComponent } from './chart/pie-chart/pie-chart.component'; 
@@ -39,6 +40,7 @@ import { LinearGaugeComponent } from './chart/gauge/linear-gauge.component';
         PieChartComponent,
         AdvancedPieChartComponent,
         PieGridComponent,
+		LoadingComponent,
 
         BarVerticalComponent,
         BarHorizontalComponent,
